@@ -9,10 +9,11 @@ import Capacitor
 public class ZoomPluginPlugin: CAPPlugin {
     private let implementation = ZoomPlugin()
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+    @objc func enableZoom(_ call: CAPPluginCall) {
+        call.resolve([:])
+    }
+
+    @objc func disableZoom(_ call: CAPPluginCall) {
+        call.resolve([:])
     }
 }

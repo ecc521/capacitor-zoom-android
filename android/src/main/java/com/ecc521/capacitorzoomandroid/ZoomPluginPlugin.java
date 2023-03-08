@@ -12,11 +12,15 @@ public class ZoomPluginPlugin extends Plugin {
     private ZoomPlugin implementation = new ZoomPlugin();
 
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
+    public void enableZoom(PluginCall call) {
+        this.bridge.getWebView().getSettings().setBuiltInZoomControls(true);
+        this.bridge.getWebView().getSettings().setDisplayZoomControls(false);
+        call.resolve();
+    }
 
-        JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
-        call.resolve(ret);
+    @PluginMethod
+    public void disableZoom(PluginCall call) {
+        this.bridge.getWebView().getSettings().setBuiltInZoomControls(false);
+        call.resolve();
     }
 }

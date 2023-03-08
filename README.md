@@ -13,24 +13,36 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`enableZoom()`](#enablezoom)
+* [`disableZoom()`](#disablezoom)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### enableZoom()
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+enableZoom() => Promise<void>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+Enable pinch-zoom on Android
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Since:** 0.0.1
+
+--------------------
+
+
+### disableZoom()
+
+```typescript
+disableZoom() => Promise<void>
+```
+
+Disable pinch-zoom on Android.
+
+**Since:** 0.0.1
 
 --------------------
 
