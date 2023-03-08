@@ -1,7 +1,5 @@
 # capacitor-zoom-android
 
-Enable or disable pinch-zoom on Android apps built with Capacitor
-
 ## Install
 
 ```bash
@@ -27,7 +25,7 @@ npx cap sync
 enableZoom() => Promise<void>
 ```
 
-Enable pinch-zoom on Android
+Enable pinch-zoom on Android. Does nothing on web and iOS.
 
 **Since:** 0.0.1
 
@@ -40,7 +38,7 @@ Enable pinch-zoom on Android
 disableZoom() => Promise<void>
 ```
 
-Disable pinch-zoom on Android.
+Disable pinch-zoom on Android. Does nothing on web and iOS.
 
 **Since:** 0.0.1
 
