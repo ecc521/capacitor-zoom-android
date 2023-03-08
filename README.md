@@ -1,6 +1,6 @@
 # capacitor-zoom-android
 
-Enable or disable zoom on Android apps built with Capacitor
+Enable or disable pinch-zoom on Android apps built with Capacitor
 
 ## Install
 

@@ -6,6 +6,8 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
+import android.webkit.WebView;
+
 @CapacitorPlugin(name = "ZoomPlugin")
 public class ZoomPluginPlugin extends Plugin {
 
@@ -13,14 +15,29 @@ public class ZoomPluginPlugin extends Plugin {
 
     @PluginMethod
     public void enableZoom(PluginCall call) {
-        this.bridge.getWebView().getSettings().setBuiltInZoomControls(true);
-        this.bridge.getWebView().getSettings().setDisplayZoomControls(false);
+        WebView view = this.bridge.getWebView();
+
+        view.post(new Runnable() {
+            @Override
+            public void run() {
+                view.getSettings().setBuiltInZoomControls(true);
+                view.getSettings().setDisplayZoomControls(false);
+            }
+        });
+
         call.resolve();
     }
 
     @PluginMethod
     public void disableZoom(PluginCall call) {
-        this.bridge.getWebView().getSettings().setBuiltInZoomControls(false);
+        WebView view = this.bridge.getWebView();
+
+        view.post(new Runnable() {
+            @Override
+            public void run() {
+                view.getSettings().setBuiltInZoomControls(false);
+            }
+        });
         call.resolve();
     }
 }
