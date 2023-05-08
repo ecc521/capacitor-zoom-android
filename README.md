@@ -7,6 +7,8 @@ npm install capacitor-zoom-android
 npx cap sync
 ```
 
+If you're using Capacitor 4, run ```npm install capacitor-zoom-android@1```
+
 ## API
 
 <docgen-index>
