@@ -1,3 +1,6 @@
+# UPDATE: Zoom is now available in the core Capacitor library (see https://github.com/ionic-team/capacitor/pull/7000 and https://github.com/ionic-team/capacitor/issues/4620), so I will not be making any further updates to this library. 
+
+
 # capacitor-zoom-android
 
 ## Install
