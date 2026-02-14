@@ -1,6 +1,6 @@
 {
   "name": "capacitor-zoom-android",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Enable or disable pinch-zoom on Android apps built with Capacitor",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
